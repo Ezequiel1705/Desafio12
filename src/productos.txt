@@ -1,0 +1,25 @@
+[
+  {
+    "title": "title 1",
+    "price": 100,
+    "thumbnail":  'https://picsum.photos/id/237/200',
+    "id": 1
+  },
+  {
+    "title": "title 2",
+    "price": 200,
+    "thumbnail":  'https://picsum.photos/id/237/200',
+    "id": 2
+  },
+  {
+    "title": "title 3",
+    "price": 300,
+    "thumbnail": 'https://picsum.photos/id/237/200',
+    "id": 3
+  },
+  {
+    "title": "title 4",
+    "price": 400,
+    "thumbnail":  'https://picsum.photos/id/237/200',
+    "id": 4
+  },

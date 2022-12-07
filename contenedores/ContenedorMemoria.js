@@ -12,20 +12,25 @@ class ContenedorMemoria {
         return this.elementos;
     }
 
-    guardar(elem) {
-        
+    guardar() {
+        const id = this.getId()
+  
+        this.elementos.push({
+            ...elemento, ...{id : id +1}
+        })
     }
 
-    actualizar(elem, id) {
+    /* actualizar(elem, id) {
         
     }
 
     borrar(id) {
         
-    }
+    } */
 
     borrarAll() {
-        
+        const removed = this.elementos.slice(this.elementos.length - 1)
+        return removed
     }
 }
 

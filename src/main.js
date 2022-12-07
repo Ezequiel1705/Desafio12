@@ -4,8 +4,8 @@ const { Server: HttpServer} = require('http')
 
 const { Server: Socket } = require('socket.io')
 
-const ContenedorMemoria = require('../contenedores/ContenedorMemoria.js')
-const ContenedorArchivo = require('../contenedores/ContenedorArchivo.js')
+const ContenedorMemoria = require('./contenedores/ContenedorMemoria.js')
+const ContenedorArchivo = require('./contenedores/ContenedorArchivo.js')
 
 //--------------------------------------------
 // instancio servidor, socket y api
@@ -23,12 +23,10 @@ io.on('connection', async socket => {
     const productos = new ContenedorArchivo(this.ruta);
     let allProductos = await productos.listarAll();
     console.log(allProductos);
+    socket.emit('productos', allProductos);
 
-    /* socket.emit('mensajes', ContenedorArchivo);
-
-    socket.on('nuevo-mensaje', productos => {
-        productos.push();
-    }) */
+    socket.emit('mensajes', mensajes.listarAll())
+    
     //productos
     //mensajes
 });
